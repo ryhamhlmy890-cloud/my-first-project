@@ -2,11 +2,53 @@
 <html>
 <head>
 <title>Rehab Site</title>
+
+<style>
+body {
+    background-color: pink;
+    text-align: center;
+    font-family: Arial;
+}
+
+h1 {
+    animation: move 2s infinite alternate;
+}
+
+@keyframes move {
+    from {transform: translateY(0);}
+    to {transform: translateY(20px);}
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+</style>
+
+<script>
+function showMessage() {
+    alert("بحبك يا ريهام ❤️🔥");
+}
+</script>
+
 </head>
 
-<body style="background-color:pink; text-align:center;">
-    <h1>اهلا يا ريهام ❤️</h1>
-    <p>ده اول موقع ليا 🔥</p>
-</body>
+<body>
 
+<h1>اهلا يا ريهام ❤️</h1>
+
+<p>ده اول موقع ليا 🔥</p>
+
+<img src="https://i.imgur.com/8Km9tLL.png" width="200">
+
+<br><br>
+
+<button onclick="showMessage()">اضغطي هنا 😏</button>
+
+</body>
 </html>

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
 <meta charset="UTF-8">
 <title>Love Site ❤️</title>
@@ -13,13 +12,13 @@ body {
   overflow: hidden;
 }
 
-/* حركة العنوان */
+/* العنوان */
 h1 {
   font-size: 35px;
   animation: move 2s infinite alternate;
 }
 
-/* حركة خفيفة للنص */
+/* الكلام */
 p {
   font-size: 22px;
   animation: fade 3s infinite;
@@ -27,53 +26,77 @@ p {
 
 /* الصورة */
 img {
-  margin-top: 20px;
-  border-radius: 20px;
   width: 200px;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+/* الزر */
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* حركة */
+@keyframes move {
+  from {transform: translateY(0);}
+  to {transform: translateY(10px);}
+}
+
+@keyframes fade {
+  0% {opacity: 1;}
+  50% {opacity: 0.5;}
+  100% {opacity: 1;}
 }
 
 /* القلوب */
 .heart {
   position: fixed;
-  color: red;
   font-size: 20px;
-  animation: fall 5s linear infinite;
-}
-
-/* انيميشن */
-@keyframes move {
-  from { transform: translateY(0); }
-  to { transform: translateY(20px); }
-}
-
-@keyframes fade {
-  0% { opacity: 1; }
-  50% { opacity: 0.5; }
-  100% { opacity: 1; }
+  animation: fall 3s linear forwards;
 }
 
 @keyframes fall {
-  0% { top: -10%; }
-  100% { top: 100%; }
+  from {top: -20px;}
+  to {top: 100vh;}
 }
 </style>
+
+<script>
+function hearts() {
+  for (let i = 0; i < 10; i++) {
+    let heart = document.createElement("div");
+    heart.innerHTML = "❤️";
+    heart.className = "heart";
+    heart.style.left = Math.random() * 100 + "vw";
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+      heart.remove();
+    }, 3000);
+  }
+}
+</script>
 
 </head>
 
 <body>
 
-<h1>ضحكتك تنور الدنيا ❤️</h1>
-<p>وجودك في حياتي أحلى حاجة حصلتلي 🌍✨</p>
+<h1>اهلا يا ريهام ❤️</h1>
+
+<p>ضحكتك تنور الدنيا 🌍✨</p>
 
 <img src="https://i.imgur.com/8Km9tLL.png">
 
-<!-- قلوب متحركة -->
-<div class="heart" style="left:10%">❤️</div>
-<div class="heart" style="left:30%">❤️</div>
-<div class="heart" style="left:50%">❤️</div>
-<div class="heart" style="left:70%">❤️</div>
-<div class="heart" style="left:90%">❤️</div>
+<br>
+
+<button onclick="hearts()">اضغطي هنا ❤️</button>
 
 </body>
-
 </html>

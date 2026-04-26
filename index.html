@@ -3,30 +3,58 @@
 
 <head>
 <meta charset="UTF-8">
-<title>Reham Site</title>
+<title>Love Site ❤️</title>
 
 <style>
 body {
-  background-color: pink;
+  background: pink;
   text-align: center;
   font-family: Arial;
+  overflow: hidden;
 }
 
+/* حركة العنوان */
 h1 {
-  color: black;
-  font-size: 32px;
-  margin-top: 30px;
+  font-size: 35px;
+  animation: move 2s infinite alternate;
 }
 
+/* حركة خفيفة للنص */
 p {
-  font-size: 20px;
-  margin-top: 10px;
+  font-size: 22px;
+  animation: fade 3s infinite;
 }
 
+/* الصورة */
 img {
   margin-top: 20px;
   border-radius: 20px;
   width: 200px;
+}
+
+/* القلوب */
+.heart {
+  position: fixed;
+  color: red;
+  font-size: 20px;
+  animation: fall 5s linear infinite;
+}
+
+/* انيميشن */
+@keyframes move {
+  from { transform: translateY(0); }
+  to { transform: translateY(20px); }
+}
+
+@keyframes fade {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+@keyframes fall {
+  0% { top: -10%; }
+  100% { top: 100%; }
 }
 </style>
 
@@ -38,6 +66,13 @@ img {
 <p>وجودك في حياتي أحلى حاجة حصلتلي 🌍✨</p>
 
 <img src="https://i.imgur.com/8Km9tLL.png">
+
+<!-- قلوب متحركة -->
+<div class="heart" style="left:10%">❤️</div>
+<div class="heart" style="left:30%">❤️</div>
+<div class="heart" style="left:50%">❤️</div>
+<div class="heart" style="left:70%">❤️</div>
+<div class="heart" style="left:90%">❤️</div>
 
 </body>
 
